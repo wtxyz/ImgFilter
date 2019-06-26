@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/color_levels_tweak_options" android:title="@string/color_tweak_menu_string"/>
+    <!--<item android:id="@+id/hue_saturation_lightness_tweak_options" android:title="@string/hue_saturation_lightness_tweak_options_menu_string"/>-->
+
+</menu>

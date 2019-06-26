@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/half_white_color"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ImageProcessActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/single_process_image_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            android:background="@android:color/transparent">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/image_process_restore_btn"
+                    android:textColor="@drawable/selector_btn"
+                    android:layout_width="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restore_btn"
+                    />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:id="@+id/photoEditorView"
+        app:layout_constraintBottom_toTopOf="@id/bottom_linearLayout_beautify_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <!--Top 4 buttons-->
+    <LinearLayout
+        android:id="@+id/bottom_linearLayout_beautify_button_group"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/bottom_linearLayout_beautify"
+        android:background="@color/half_white_color"
+        android:layout_height="32dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/beautify_open_album_btn"
+                android:layout_width="24dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="18dp"
+                android:background="@drawable/ic_image"
+                android:layout_height="24dp" />
+
+            <Button
+                android:id="@+id/beautify_take_photo_btn"
+                android:layout_width="24dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_photo_camera"
+                android:layout_height="24dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/beautify_undo_btn"
+                android:layout_width="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_undo"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/beautify_redo_btn"
+                android:layout_width="24dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/ic_redo"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_linearLayout_beautify_with_recy"
+        android:layout_width="match_parent"
+
+        android:layout_height="84dp"
+        android:background="@color/half_white_color"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/beautify_bottom_layout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/beautify_filter_effect_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_linearLayout_beautify"
+        app:layout_constraintBottom_toTopOf="@id/beautify_bottom_layout"
+        android:background="@color/half_white_color"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/beautify_brush_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_brush" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="画刷"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/half_black_color"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/beautify_font_btn"
+                android:layout_width="24dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/ic_fonts_hand_drawn_symbol_outline"
+                android:layout_height="24dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="文字"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/half_black_color"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+
+
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/beautify_filter_btn"
+                android:layout_width="24dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/ic_funnel"
+                android:layout_height="24dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="滤镜"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/half_black_color"
+                />
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_weight="1"-->
+
+            <!--android:layout_gravity="center"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<Button-->
+                <!--android:id="@+id/beautify_emjoi_btn"-->
+                <!--android:layout_width="32dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:gravity="center"-->
+                <!--android:background="@mipmap/emoticon"-->
+                <!--android:layout_height="32dp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="Emoji"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/half_white_color"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_weight="1"
+
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/beautify_clear_all_btn"
+                android:layout_width="24dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/ic_eraser"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="清除操作"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/half_black_color"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/beautify_share_btn"
+                android:layout_width="24dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/ic_share"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="分享"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/half_black_color"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@color/half_white_color"
+        android:id="@+id/beautify_bottom_layout"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <Button
+            android:id="@+id/exit_beautify_or_filter_btn"
+            android:layout_width="18dp"
+            android:gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/ic_cancel"
+            android:layout_height="18dp" />
+        <TextView
+            android:id="@+id/beautify_propmt_textview"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:textColor="@color/half_black_color"
+            android:layout_centerHorizontal="true"
+            android:text="NULL"
+            android:layout_height="24dp" />
+        <Button
+            android:id="@+id/beautify_save_btn"
+            android:layout_width="18dp"
+            android:gravity="center"
+            android:layout_marginEnd="32dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_save_file_option"
+            android:layout_height="18dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

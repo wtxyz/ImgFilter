@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/half_white_color">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/color_levels_channel_prompt_string"
+        android:textSize="16sp"
+        />
+<Spinner
+    android:id="@+id/color_levels_channel_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:entries="@array/color_levels_channel_arrays"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="16dp"
+    android:spinnerMode="dialog"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/color_levels_shadow_prompt_string"
+        android:textSize="16sp"
+        />
+    <SeekBar
+        android:id="@+id/color_levels_shadow_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/color_levels_midtones_prompt_string"
+        />
+
+    <SeekBar
+        android:id="@+id/color_levels_midtones_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/color_levels_highlight_prompt_string"
+        />
+    <SeekBar
+        android:id="@+id/color_levels_highlight_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/color_levels_output_shadow_prompt_string"
+        />
+
+    <SeekBar
+        android:id="@+id/color_levels_output_shadow_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/color_levels_output_highlight_prompt_string"
+        />
+
+    <SeekBar
+        android:id="@+id/color_levels_output_highlight_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+</LinearLayout>

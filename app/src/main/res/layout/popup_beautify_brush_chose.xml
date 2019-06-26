@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/half_white_color">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="画刷大小"
+            android:textSize="16dp"
+            />
+        <SeekBar
+            android:id="@+id/brush_size_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+    <TextView
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/opacity"
+        />
+
+        <SeekBar
+            android:id="@+id/brush_opacity_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+    <TextView
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="画刷颜色(滑动选择更多)"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/brush_color_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

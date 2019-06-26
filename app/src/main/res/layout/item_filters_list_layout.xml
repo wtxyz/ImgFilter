@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_margin="2dp"
+        android:id="@+id/item_filter_list_imageview"
+        android:layout_width="84dp"
+
+        android:layout_height="84dp" />
+    <TextView
+        android:id="@+id/item_filter_list_textview"
+        android:layout_width="84dp"
+        android:gravity="center"
+        android:text="NULL"
+        android:background="@color/half_black_color"
+        android:layout_gravity="bottom"
+        app:layout_anchorGravity="bottom"
+        android:textColor="@color/half_white_color"
+        app:layout_anchor="@id/item_filter_list_imageview"
+        android:layout_height="wrap_content" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
